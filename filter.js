@@ -48,27 +48,7 @@ function getItems (e) {
 
    }
 
-// Add contact to the list 
-const addBtn = document.getElementById('add-contact-btn');
-addBtn.addEventListener('click', addContact); 
-   
-function addContact(e) {
-   e.preventDefault();
-   const name = prompt('Enter the name of contact:');
-   if (name) {
-      const list = document.querySelector('.contact-collection');
-      const li = document.createElement('li');
-      li.className = 'contact-item';
-      const a = document.createElement('a');
-      a.href = '#';
-      a.textContent = name;
-      li.appendChild(a);
-      list.appendChild(li);
-   }
-   validateName(name);
-}
-
-// validate name 
+   // validate name 
 function validateName(name) {
   try {
     if (name === '') throw 'empty';
@@ -80,12 +60,43 @@ function validateName(name) {
   return true;
 }
 
+
+// Add contact to the list 
+const addBtn = document.getElementById('add-contact-btn');
+addBtn.addEventListener('click', addContact); 
+   
+function addContact(e) {
+   e.preventDefault();
+   const name = prompt('Enter the name of contact:');
+   
+   if (!validateName(name)) {
+  return; // stop if invalid
+   }
+   if (name) {
+      const list = document.querySelector('.contact-collection');
+      const li = document.createElement('li');
+      li.className = 'contact-item';
+      const a = document.createElement('a');
+      a.href = '#';
+      a.textContent = name;
+      li.appendChild(a);
+      list.appendChild(li);
+   }
+   
+}
+
+
 // Delete contact from list 
 const deleteBtn = document.getElementById('delete-contact-btn');
 deleteBtn.addEventListener('click', deleteContact);
 function deleteContact(e) {
    e.preventDefault();
    const name = prompt('Enter the name of contact to delete:');
+
+   if (!validateName(name)) {
+     return; // stop if invalid
+   }
+
    if (name) {
      const searchName = name.trim().toUpperCase();
      const list = document.querySelector('.contact-collection');
@@ -106,5 +117,5 @@ function deleteContact(e) {
       alert(name + ' not found in contacts.');
    }
    }
-   validateName(name);
+   
 }

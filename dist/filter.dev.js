@@ -38,28 +38,6 @@ function getItems(e) {
 
     header.style.display = isVisible ? '' : 'none';
   });
-} // Add contact to the list 
-
-
-var addBtn = document.getElementById('add-contact-btn');
-addBtn.addEventListener('click', addContact);
-
-function addContact(e) {
-  e.preventDefault();
-  var name = prompt('Enter the name of contact:');
-
-  if (name) {
-    var list = document.querySelector('.contact-collection');
-    var li = document.createElement('li');
-    li.className = 'contact-item';
-    var a = document.createElement('a');
-    a.href = '#';
-    a.textContent = name;
-    li.appendChild(a);
-    list.appendChild(li);
-  }
-
-  validateName(name);
 } // validate name 
 
 
@@ -73,6 +51,30 @@ function validateName(name) {
   }
 
   return true;
+} // Add contact to the list 
+
+
+var addBtn = document.getElementById('add-contact-btn');
+addBtn.addEventListener('click', addContact);
+
+function addContact(e) {
+  e.preventDefault();
+  var name = prompt('Enter the name of contact:');
+
+  if (!validateName(name)) {
+    return; // stop if invalid
+  }
+
+  if (name) {
+    var list = document.querySelector('.contact-collection');
+    var li = document.createElement('li');
+    li.className = 'contact-item';
+    var a = document.createElement('a');
+    a.href = '#';
+    a.textContent = name;
+    li.appendChild(a);
+    list.appendChild(li);
+  }
 } // Delete contact from list 
 
 
@@ -82,6 +84,10 @@ deleteBtn.addEventListener('click', deleteContact);
 function deleteContact(e) {
   e.preventDefault();
   var name = prompt('Enter the name of contact to delete:');
+
+  if (!validateName(name)) {
+    return; // stop if invalid
+  }
 
   if (name) {
     var searchName = name.trim().toUpperCase();
@@ -105,7 +111,5 @@ function deleteContact(e) {
       alert(name + ' not found in contacts.');
     }
   }
-
-  validateName(name);
 }
 //# sourceMappingURL=filter.dev.js.map
