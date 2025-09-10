@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Contact List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text">My Contacts</h1>
+
+      <div class="button-container">
+        <button id="add-contact-btn" class="action-btn">Add Contact</button>
+        <button id="delete-contact-btn" class="action-btn">Delete Contact</button>
+      </div>
+
+      <input
+        type="text"
+        name="text"
+        id="filter"
+        placeholder="Search names ..."
+        aria-label="Search contacts by name"
+      />
+
+      <ul class="contact-collection" id="names" role="list">
+        <li class="contact-header"><h5>A</h5></li>
+        <li class="contact-item"><a href="#">Adrian</a></li>
+        <li class="contact-item"><a href="#">Abel</a></li>
+        <li class="contact-item"><a href="#">Ayo</a></li>
+        <li class="contact-item"><a href="#">Adam</a></li>
+
+        <li class="contact-header"><h5>B</h5></li>
+        <li class="contact-item"><a href="#">Bunny</a></li>
+        <li class="contact-item"><a href="#">Beesto</a></li>
+        <li class="contact-item"><a href="#">Barbie</a></li>
+        <li class="contact-item"><a href="#">Bane</a></li>
+
+        <li class="contact-header"><h5>C</h5></li>
+        <li class="contact-item"><a href="#">Christian</a></li>
+        <li class="contact-item"><a href="#">Clara</a></li>
+        <li class="contact-item"><a href="#">Celina</a></li>
+        <li class="contact-item"><a href="#">Ciara</a></li>
+
+        <li class="contact-header"><h5>D</h5></li>
+        <li class="contact-item"><a href="#">David</a></li>
+        <li class="contact-item"><a href="#">Diana</a></li>
+        <li class="contact-item"><a href="#">Daniel</a></li>
+        <li class="contact-item"><a href="#">Daphne</a></li>
+
+        <li class="contact-header"><h5>E</h5></li>
+        <li class="contact-item"><a href="#">Ethan</a></li>
+        <li class="contact-item"><a href="#">Ella</a></li>
+        <li class="contact-item"><a href="#">Emmanuel</a></li>
+        <li class="contact-item"><a href="#">Eva</a></li>
+
+        <li class="contact-header"><h5>F</h5></li>
+        <li class="contact-item"><a href="#">Felix</a></li>
+        <li class="contact-item"><a href="#">Faith</a></li>
+        <li class="contact-item"><a href="#">Fiona</a></li>
+        <li class="contact-item"><a href="#">Frank</a></li>
+
+        <li class="contact-header"><h5>G</h5></li>
+        <li class="contact-item"><a href="#">George</a></li>
+        <li class="contact-item"><a href="#">Grace</a></li>
+        <li class="contact-item"><a href="#">Gabriel</a></li>
+        <li class="contact-item"><a href="#">Gloria</a></li>
+
+        <li class="contact-header"><h5>H</h5></li>
+        <li class="contact-item"><a href="#">Henry</a></li>
+        <li class="contact-item"><a href="#">Hannah</a></li>
+        <li class="contact-item"><a href="#">Helen</a></li>
+        <li class="contact-item"><a href="#">Harold</a></li>
+
+        <li class="contact-header"><h5>I</h5></li>
+        <li class="contact-item"><a href="#">Isaac</a></li>
+        <li class="contact-item"><a href="#">Ivy</a></li>
+        <li class="contact-item"><a href="#">Immanuel</a></li>
+        <li class="contact-item"><a href="#">Irene</a></li>
+
+        <li class="contact-header"><h5>J</h5></li>
+        <li class="contact-item"><a href="#">John</a></li>
+        <li class="contact-item"><a href="#">Jane</a></li>
+        <li class="contact-item"><a href="#">James</a></li>
+        <li class="contact-item"><a href="#">Joy</a></li>
+
+        <li class="contact-header"><h5>K</h5></li>
+        <li class="contact-item"><a href="#">Kevin</a></li>
+        <li class="contact-item"><a href="#">Kate</a></li>
+        <li class="contact-item"><a href="#">Kyle</a></li>
+        <li class="contact-item"><a href="#">Kendra</a></li>
+
+        <li class="contact-header"><h5>L</h5></li>
+        <li class="contact-item"><a href="#">Leo</a></li>
+        <li class="contact-item"><a href="#">Laura</a></li>
+        <li class="contact-item"><a href="#">Liam</a></li>
+        <li class="contact-item"><a href="#">Linda</a></li>
+
+        <li class="contact-header"><h5>M</h5></li>
+        <li class="contact-item"><a href="#">Michael</a></li>
+        <li class="contact-item"><a href="#">Mary</a></li>
+        <li class="contact-item"><a href="#">Mark</a></li>
+        <li class="contact-item"><a href="#">Maya</a></li>
+
+        <li class="contact-header"><h5>N</h5></li>
+        <li class="contact-item"><a href="#">Nathan</a></li>
+        <li class="contact-item"><a href="#">Naomi</a></li>
+        <li class="contact-item"><a href="#">Nora</a></li>
+        <li class="contact-item"><a href="#">Noah</a></li>
+
+        <li class="contact-header"><h5>O</h5></li>
+        <li class="contact-item"><a href="#">Oscar</a></li>
+        <li class="contact-item"><a href="#">Olivia</a></li>
+        <li class="contact-item"><a href="#">Owen</a></li>
+        <li class="contact-item"><a href="#">Ophelia</a></li>
+
+        <li class="contact-header"><h5>P</h5></li>
+        <li class="contact-item"><a href="#">Paul</a></li>
+        <li class="contact-item"><a href="#">Pamela</a></li>
+        <li class="contact-item"><a href="#">Peter</a></li>
+        <li class="contact-item"><a href="#">Priscilla</a></li>
+
+        <li class="contact-header"><h5>Q</h5></li>
+        <li class="contact-item"><a href="#">Quincy</a></li>
+        <li class="contact-item"><a href="#">Queen</a></li>
+        <li class="contact-item"><a href="#">Quinn</a></li>
+        <li class="contact-item"><a href="#">Quentin</a></li>
+
+        <li class="contact-header"><h5>R</h5></li>
+        <li class="contact-item"><a href="#">Robert</a></li>
+        <li class="contact-item"><a href="#">Rachel</a></li>
+        <li class="contact-item"><a href="#">Ray</a></li>
+        <li class="contact-item"><a href="#">Rita</a></li>
+
+        <li class="contact-header"><h5>S</h5></li>
+        <li class="contact-item"><a href="#">Samuel</a></li>
+        <li class="contact-item"><a href="#">Sophia</a></li>
+        <li class="contact-item"><a href="#">Steve</a></li>
+        <li class="contact-item"><a href="#">Sandra</a></li>
+
+        <li class="contact-header"><h5>T</h5></li>
+        <li class="contact-item"><a href="#">Thomas</a></li>
+        <li class="contact-item"><a href="#">Tina</a></li>
+        <li class="contact-item"><a href="#">Tony</a></li>
+        <li class="contact-item"><a href="#">Teresa</a></li>
+
+        <li class="contact-header"><h5>U</h5></li>
+        <li class="contact-item"><a href="#">Umar</a></li>
+        <li class="contact-item"><a href="#">Uche</a></li>
+        <li class="contact-item"><a href="#">Ursula</a></li>
+        <li class="contact-item"><a href="#">Ugo</a></li>
+
+        <li class="contact-header"><h5>V</h5></li>
+        <li class="contact-item"><a href="#">Victor</a></li>
+        <li class="contact-item"><a href="#">Vera</a></li>
+        <li class="contact-item"><a href="#">Vanessa</a></li>
+        <li class="contact-item"><a href="#">Valerie</a></li>
+
+        <li class="contact-header"><h5>W</h5></li>
+        <li class="contact-item"><a href="#">William</a></li>
+        <li class="contact-item"><a href="#">Wendy</a></li>
+        <li class="contact-item"><a href="#">Walter</a></li>
+        <li class="contact-item"><a href="#">Whitney</a></li>
+
+        <li class="contact-header"><h5>X</h5></li>
+        <li class="contact-item"><a href="#">Xander</a></li>
+        <li class="contact-item"><a href="#">Ximena</a></li>
+        <li class="contact-item"><a href="#">Xavier</a></li>
+        <li class="contact-item"><a href="#">Xyla</a></li>
+
+        <li class="contact-header"><h5>Y</h5></li>
+        <li class="contact-item"><a href="#">Yusuf</a></li>
+        <li class="contact-item"><a href="#">Yara</a></li>
+        <li class="contact-item"><a href="#">Yvonne</a></li>
+        <li class="contact-item"><a href="#">Yael</a></li>
+
+        <li class="contact-header"><h5>Z</h5></li>
+        <li class="contact-item"><a href="#">Zach</a></li>
+        <li class="contact-item"><a href="#">Zara</a></li>
+        <li class="contact-item"><a href="#">Zion</a></li>
+        <li class="contact-item"><a href="#">Zoey</a></li>
+      </ul>
+    </div>
+    <script src="filter.js"></script>
+  </body>
+</html>
